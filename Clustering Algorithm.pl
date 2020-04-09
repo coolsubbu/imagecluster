@@ -1,6 +1,9 @@
 #!usr/bin/perl
+
+
 #AIM: To Cluster Images using correlation coefficients between the images.
-opendir(DIR,"/home/yogesh/Desktop/corrnew") or die "the directory could not be found $!";   #directory containing the files containing the correlation coefficients between images
+$location="/home/yogesh/"
+opendir(DIR,"$location.corrnew") or die "the directory could not be found $!";   #directory containing the files containing the correlation coefficients between images
 open(FIL,">Clusters-version0.txt") or die "cant open the file $!";   #Output file to store the clustered image names
 my @files=readdir(DIR);
 my $count=0;
